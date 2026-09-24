@@ -1,29 +1,46 @@
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background: #252323c2;
-  color: #ececec;
-  line-height: 1.6;
-  margin: 0;
+/*index*/
+
+* {
+  box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #000;
+  color: #ececec;
+  line-height: 1.6;
+}
 
 header {
-  background: linear-gradient(135deg, #aa9fb1af, #cdcacea8);
-  color: #0c0303;
-  text-align: center;
-  padding: 20px 20px 0;
-  box-shadow: 0 4px 15px rgba(218, 218, 218, 0.253);
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 
 header h1 {
+  color: #fff;
   font-size: 30px;
   letter-spacing: 3px;
-  margin: 0 0 20px;
+  margin: 0;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 nav {
-  background: rgba(0, 0, 0, 0.849);
+  background: #000;
   padding: 10px;
 }
 
@@ -32,63 +49,92 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 50px;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
 
 nav a {
-  color: #bebff3;
+  color: rgb(255, 254, 254);
   text-decoration: none;
   font-size: 17px;
   font-weight: bold;
-  transition: 0.3s ease;
-  position: relative;
 }
 
-main > img {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 60px 25px;
+nav a:hover {
+  color: #d00000;
+}
+
+main {
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+
+main>img {
   display: block;
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+  object-position: center bottom;
 }
 
 main video {
   display: block;
-  width: 600px;
-  margin: 20px auto;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
 }
+
 main h2 {
   text-align: center;
 }
 
 #top3 {
+  width: 100vw;
+  margin: 0;
+  padding: 40px 0;
+  background: #000;
+  color: #fff;
   text-align: center;
 }
 
 #top3 h2 {
   font-size: 30px;
-  color: #e1e1e1;
-  margin-bottom: 35px;
+  color: #fff;
+  margin: 0 0 35px;
 }
 
 #top3 ol {
+  width: 100vw;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 24px;
+  margin: 0;
+  padding: 0 36px;
 }
 
 .vinho {
-  background: #413c3570;
-  border: 1px solid #0c0b0a;
-  border-radius: 1px;
-  padding: 10px;
+  width: 100%;
+  min-height: 300px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 1%;
+  justify-content: space-between;
 }
 
 .vinho img {
@@ -99,4 +145,455 @@ main h2 {
 
 h4 {
   text-align: center;
+}
+
+/* Página contato */
+
+#contato_direto,
+#contato_pre-venda,
+#FAQ {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 45px 30px;
+}
+
+#contato_direto {
+  text-align: center;
+}
+
+#contato_direto h1 {
+  color: #fff;
+  font-size: 36px;
+  letter-spacing: 2px;
+  margin: 0 0 25px;
+}
+
+#contato_direto img {
+  display: block;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto 30px;
+  border: 2px solid #8b0000;
+}
+
+#contato_direto h2,
+#contato_pre-venda h2,
+#FAQ h2 {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#contato_direto ul {
+  max-width: 700px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 20px;
+  background: #111;
+  border-left: 4px solid #d00000;
+}
+
+#contato_direto li {
+  margin: 10px 0;
+}
+
+#contato_direto a {
+  color: #d00000;
+}
+
+#contato_pre-venda {
+  background: #0b0b0b;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+#contato_pre-venda form {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #111;
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+#contato_pre-venda label {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  color: #fff;
+  font-weight: bold;
+}
+
+#contato_pre-venda input,
+#contato_pre-venda textarea {
+  width: 100%;
+  padding: 12px;
+  background: #222;
+  color: #fff;
+  border: 1px solid #777;
+  border-radius: 3px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+}
+
+#contato_pre-venda input:focus,
+#contato_pre-venda textarea:focus {
+  outline: none;
+  border-color: #d00000;
+}
+
+#contato_pre-venda textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+#contato_pre-venda button {
+  display: block;
+  margin: 25px auto 0;
+  padding: 12px 28px;
+  background: #d00000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#contato_pre-venda button:hover {
+  background: #8b0000;
+}
+
+#FAQ {
+  text-align: left;
+}
+
+#FAQ h2 {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+#FAQ h3 {
+  color: #d00000;
+  margin-top: 25px;
+}
+
+#FAQ p {
+  color: #ddd;
+  background: #111;
+  padding: 15px 20px;
+  border-left: 3px solid #8b0000;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-top: 2px solid #8b0000;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  nav ul {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  #top3 ol {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+
+  #contato_direto,
+  #contato_pre-venda,
+  #FAQ {
+    padding: 30px 15px;
+  }
+
+  #contato_direto img {
+    height: 40vh;
+  }
+
+  #contato_pre-venda form {
+    padding: 20px;
+  }
+}
+
+/*Sobre*/
+
+#sobre {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 45px 30px;
+}
+
+#sobre h1 {
+  color: #fff;
+  font-size: 36px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0 0 30px;
+}
+
+#sobre h2 {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  margin: 35px 0 20px;
+}
+
+#sobre p {
+  color: #ddd;
+  background: #111;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid #d00000;
+  line-height: 1.6;
+}
+
+#sobre img {
+  display: block;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto 30px;
+  border: 2px solid #8b0000;
+}
+
+#sobre ul {
+  max-width: 900px;
+  list-style: none;
+  margin: 20px auto;
+  padding: 20px;
+  background: #111;
+  border-left: 4px solid #d00000;
+}
+
+#sobre li {
+  color: #ddd;
+  margin: 10px 0;
+}
+
+/* Destaques */
+#sobre strong {
+  color: #d00000;
+}
+
+@media (max-width: 700px) {
+
+  #sobre {
+    padding: 30px 15px;
+  }
+
+  #sobre h1 {
+    font-size: 28px;
+  }
+
+  #sobre h2 {
+    font-size: 22px;
+  }
+
+  #sobre p {
+    font-size: 15px;
+  }
+
+  #sobre img {
+    height: 40vh;
+  }
+
+  #sobre ul {
+    padding: 15px;
+  }
+}
+
+/*Galeria*/
+
+/* =========================
+   GALERIA
+   ========================= */
+
+.galeria {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Título */
+.galeria h1 {
+  grid-column: 1 / -1;
+
+  color: #fff;
+  font-size: 36px;
+  text-align: center;
+
+  margin: 0 0 20px;
+}
+
+/* Cada imagem */
+.galeria section {
+  width: 100%;
+  height: 230px;
+
+  margin: 0;
+  padding: 0;
+
+  background: #111;
+  border: 2px solid #8b0000;
+
+  overflow: hidden;
+}
+
+/* Imagem */
+.galeria section img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  transition: transform 0.3s ease;
+}
+
+/* Zoom suave */
+.galeria section img:hover {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+
+  .galeria {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .galeria section {
+    height: 220px;
+  }
+
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 700px) {
+
+  .galeria {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 0;
+  }
+
+  .galeria h1 {
+    font-size: 28px;
+  }
+
+  .galeria section {
+    height: 220px;
+  }
+
+} 
+
+/*equipe*/
+
+body>h4 {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px 25px;
+
+  background: #111;
+  color: #fff;
+
+  border-left: 4px solid #d00000;
+  border-top: 1px solid #333;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: left;
+
+  transition: 0.3s;
+}
+
+body>h4:first-of-type {
+  margin-top: 50px;
+}
+
+body>h4:hover {
+  background: #181818;
+  border-left-color: #8b0000;
+  transform: translateX(5px);
+}
+
+body>h4:first-of-type::before {
+  content: "Equipe Vinharia Agnello";
+  display: block;
+
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: 2px;
+
+  margin-bottom: 35px;
+}
+
+@media (max-width: 700px) {
+
+  body>h4 {
+    width: 90%;
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+
+  body>h4:first-of-type {
+    margin-top: 30px;
+  }
+
+  body>h4:first-of-type::before {
+    font-size: 23px;
+    margin-bottom: 25px;
+  }
 }
